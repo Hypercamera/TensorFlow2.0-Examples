@@ -12,6 +12,7 @@
 #================================================================
 
 from easydict import EasyDict as edict
+import os
 
 # added for submodule case
 _PREFIX = "third_party/TensorFlow2_0_Examples/Object_Detection/YOLOV3"
@@ -59,6 +60,6 @@ __C.TEST.SCORE_THRESHOLD      = 0.3
 __C.TEST.IOU_THRESHOLD        = 0.45
 
 
-__C.YOLO.CLASSES              = _PREFIX + __C.YOLO.CLASSES
-__C.YOLO.ANCHORS              = _PREFIX + __C.YOLO.ANCHORS
-__C.TRAIN.ANNOT_PATH          = _PREFIX + __C.TRAIN.ANNOT_PATH
+__C.YOLO.CLASSES              = os.path.join(_PREFIX, __C.YOLO.CLASSES)
+__C.YOLO.ANCHORS              = os.path.join(_PREFIX, __C.YOLO.ANCHORS)
+__C.TRAIN.ANNOT_PATH          = os.path.join(_PREFIX, __C.TRAIN.ANNOT_PATH)
