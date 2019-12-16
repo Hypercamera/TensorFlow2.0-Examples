@@ -14,8 +14,8 @@
 import numpy as np
 import tensorflow as tf
 import tensorflow_yolov3_utils as utils
-import common as common
-import backbone as backbone
+import tensorflow_yolov3_common as common
+import tensorflow_yolov3_backbone as backbone
 from tensorflow_yolov3_config import cfg
 
 
